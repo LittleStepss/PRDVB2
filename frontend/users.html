@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - John Doe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3 {
+            color: #007bff;
+        }
+
+        .project p {
+            margin-top: 10px;
+        }
+
+        .commentaires {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .commentaires h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .commentaire {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .commentaire p {
+            margin: 0;
+        }
+
+        #commentForm textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #commentForm button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio de John Doe</h1>
+        <p>Développeur Web Freelance</p>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <h2>Présentation</h2>
+            <p>Bienvenue sur mon portfolio ! Je suis John Doe, un développeur web freelance passionné par la création de sites web modernes et fonctionnels. Avec plusieurs années d'expérience dans le domaine, je mets mes compétences au service de vos projets pour les transformer en réalité numérique.</p>
+        </section>
+
+        <section id="projets">
+            <h2>Projets</h2>
+            <div class="project">
+                <h3>Site de e-commerce</h3>
+                <p>Création d'un site de vente en ligne pour une boutique de vêtements.</p>
+            </div>
+
+            <div class="project">
+                <h3>Plateforme de réservation</h3>
+                <p>Développement d'une plateforme de réservation pour des événements culturels.</p>
+            </div>
+
+            <div class="project">
+                <h3>Blog personnel</h3>
+                <p>Mise en place d'un blog personnel avec gestion des articles et des commentaires.</p>
+            </div>
+        </section>
+
+        <section id="commentaires" class="commentaires">
+            <h2>Commentaires</h2>
+            <div class="commentaire">
+                <p>Très satisfait du travail de John ! Il a su répondre à toutes mes attentes et livrer le projet dans les délais.</p>
+            </div>
+            <div class="commentaire">
+                <p>Professionnel et réactif, je recommande vivement John pour vos projets de développement web.</p>
+            </div>
+            
+            <h3>Ajouter un commentaire</h3>
+            <form id="commentForm" action="/ajouter_commentaire" method="POST">
+                <label for="commentaire">Votre commentaire :</label><br>
+                <textarea id="commentaire" name="commentaire" rows="4" cols="50"></textarea><br>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('mail');
             $table->string('password');
-            $table->boolean('company');
+            $table->string('company');
             $table->timestamps();
         });
     }

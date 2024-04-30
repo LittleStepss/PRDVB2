@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Users;
 
-
 class UsersController extends Controller
 {
     public function index()
@@ -31,7 +30,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = Users::find($id);
-        if (!empty($users)) {
+        if (!empty($user)) {
             return response()->json($user);
         } else {
             return response()->json([
@@ -52,13 +51,14 @@ class UsersController extends Controller
             $user->save();
             return response()->json([
                 "message" => "User Updated"
-            ], 404);
+            ], 200);
         } else {
             return response()->json([
                 "message" => "User not found"
             ], 404);
         }
     }
+
     public function destroy($id)
     {
         if (Users::where('id', $id)->exists()) {
@@ -74,6 +74,3 @@ class UsersController extends Controller
         }
     }
 }
-
-
-//['firstname', 'lastname', 'mail', 'password', 'company'];

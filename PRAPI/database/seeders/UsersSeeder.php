@@ -25,3 +25,4 @@ class UsersSeeder extends Seeder
 
 
 //['firstname', 'lastname', 'mail', 'password', 'company'];
+
